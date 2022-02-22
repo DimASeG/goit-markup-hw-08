@@ -1,0 +1,34 @@
+/* Common font, color, bg-color */
+body {
+  font-family: roboto, sans-serif;
+  color: var(--text-decoration-color);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* reset margins for headings & paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Remove markers from lists */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Remove underline */
+.conection {
+  text-decoration: none;
+}

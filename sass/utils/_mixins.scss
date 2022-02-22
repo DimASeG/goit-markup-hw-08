@@ -1,0 +1,12 @@
+@mixin fontz($fw, $fs, $flh, $fls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $flh;
+  letter-spacing: $fls;
+}
+
+@mixin flax-mix($d, $ai, $jc) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}
