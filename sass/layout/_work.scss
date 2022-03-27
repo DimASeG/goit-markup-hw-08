@@ -1,0 +1,44 @@
+.work {
+  padding-top: 0;
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+.work__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work__title {
+  margin-bottom: 50px;
+
+  @include font(700, 36px, 1.17, 0.03em);
+
+  text-align: center;
+  color: var(--main-title-color);
+}
+.work__item {
+  position: relative;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.work__text {
+  display: flex;
+  @extend %align-center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+
+  @include font(700, 14px, 1.14, 0.03em);
+
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+  background: var(--bg-overlay-work);
+}

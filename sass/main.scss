@@ -1,22 +1,25 @@
-@import './utils/variables';
-@import './utils/hidden';
-@import './utils/mixins';
+@import "./utils/varibles";
 
-@import './base/reset';
-@import './base/common';
+@import "./base/common";
+@import "./base/reset";
 
-@import './components/buttons';
-@import './components/logo';
-@import './components/modal';
-@import './components/container';
-@import './components/section';
-@import './components/filter';
+@import "./utils/hidden";
 
-@import './loyaut/header';
-@import './loyaut/hero';
-@import './loyaut/advantage';
-@import './loyaut/working';
-@import './loyaut/team';
-@import './loyaut/clients';
-@import './loyaut/portfolio';
-@import './loyaut/footer';
+@import "./components/container";
+@import "./components/section";
+@import "./components/modal";
+@import "./components/logo";
+@import "./components/adress";
+
+@import "./utils/_placeholders";
+@import "./utils/mixins";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/about";
+@import "./layout/work";
+@import "./layout/comand";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/filter-btn";
+@import "./layout/filter-container";

@@ -1,0 +1,229 @@
+.footer {
+  background-color: var(--main-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer--container {
+  align-items: baseline;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+.footer-unit-information {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    // justify-content: center;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+// ----------------------------------
+// problem with padding in logo
+.footer-nav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+.footer--logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.logo--white {
+  color: var(--hero-title-color);
+}
+.footer-nav__item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
+}
+.adress-list :not(:last-child) {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
+}
+.adress--white {
+  color: var(--hero-title-color);
+  transition: color var(--timer) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.adress--gray {
+  color: var(--footer-tel-mail-text-color);
+  transition: color var(--timer) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+/* --------------------------- */
+
+.join {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $tablet) {
+    // margin-left: 165px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+}
+.join__text {
+  margin-bottom: 20px;
+
+  font-style: normal;
+  @include font(700, 14px, 1.14, 0.03em);
+
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+}
+.join__list {
+  display: flex;
+  justify-content: center;
+
+  // @media screen and (max-width: 767px) {
+  //   margin-bottom: 60px;
+  // }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: left;
+  }
+}
+.join__item:not(:last-child) {
+  margin-right: 10px;
+}
+.join__link {
+  display: flex;
+  @extend %align-center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50% 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--hero-title-color);
+
+  transition: background-color var(--timer) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.join__icon {
+  fill: currentColor;
+}
+
+/* -----------------subscribe----------------- */
+.subscribe {
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
+}
+.subscribe__text {
+  margin-bottom: 20px;
+
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+}
+.subscribe__form {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+.subscribe__input {
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+
+  padding-left: 16px;
+
+  @include font(400, 16px, 1.25, 0.03em);
+
+  border: 1px solid var(--btn-email);
+  box-sizing: border-box;
+  filter: var(--btn-filter);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--footer-tel-mail-text-color);
+  transition: background-color var(--timer) var(--cubic-bezier);
+
+  &::placeholder {
+    @include font(400, 16px, 1.25, 0.03em);
+    display: flex;
+    align-items: center;
+
+    color: var(--footer-tel-mail-text-color);
+  }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+.subscribe__btn {
+  @extend %align-center;
+  width: 200px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+
+  @include font(700, 16px, 1.87, 0.06em);
+
+  color: var(--hero-title-color);
+  background: var(--accent-color);
+
+  border: 0;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+
+  transition: background-color var(--timer) var(--cubic-bezier);
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: var(--hero-btn-color);
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.subscribe__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}

@@ -1,0 +1,107 @@
+.comand {
+  background-color: var(--second-background-color);
+}
+.comand__title {
+  margin-bottom: 30px;
+
+  @include font(700, 28px, 1.17, 0.03em);
+  font-style: normal;
+  text-align: center;
+
+  color: var(--main-title-color);
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17, 0.03em);
+  }
+}
+
+.comand__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+.comand__item {
+  background-color: var(--hero-title-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: var(--box-shadow-comand);
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.comand__box {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.comand__name {
+  margin-bottom: 10px;
+
+  @include font(500, 16px, 1.19, 0.03em);
+  text-align: center;
+
+  color: var(--main-title-color);
+}
+.comand__work {
+  margin-bottom: 16px;
+
+  @include font(400, 16px, 1.19, 0.03em);
+  text-align: center;
+
+  color: var(--primary-color);
+}
+
+.social-network {
+  display: flex;
+  // padding: 0 32px;
+  justify-content: center;
+}
+.social-network__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-network__link {
+  display: flex;
+  @extend %align-center;
+  width: 44px;
+  height: 44px;
+
+  color: var(--social-icon);
+
+  transition: background-color var(--timer) var(--cubic-bezier),
+    border-radius var(--timer) var(--cubic-bezier),
+    color var(--timer) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    border-radius: 50% 50%;
+    color: var(--hero-title-color);
+  }
+}
+
+.social-network__icon {
+  fill: currentColor;
+}

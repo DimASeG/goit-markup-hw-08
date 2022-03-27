@@ -1,0 +1,101 @@
+.filter__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+.filter__item {
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid var(--border-color-filter);
+  background-color: var(--hero-title-color);
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+.filter__link {
+  display: block;
+
+  background-color: var(--hero-title-color);
+  transition: box-shadow var(--timer) var(--cubic-bezier);
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+  }
+
+  &:hover .filter-overlay__text,
+  &:focus .filter-overlay__text {
+    transform: translateY(0);
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.filter-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.filter-overlay__text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 63px 24px;
+
+  @include font(400, 18px, 1.56, 0.03em);
+
+  color: var(--hero-title-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(101%);
+  transition: transform var(--timer) var(--cubic-bezier);
+  @media screen and (max-width: $tablet) {
+    overflow: auto;
+  }
+}
+
+.filter-box {
+  padding: 20px 24px;
+  flex-grow: 1;
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.filter-box__title {
+  margin-bottom: 4px;
+
+  font-style: normal;
+  @include font(700, 18px, 2, 0.06em);
+
+  color: var(--main-title-color);
+}
+.filter-box__after-title {
+  @include font(400, 16px, 1.87, 0.03em);
+
+  color: var(--primary-color);
+}
